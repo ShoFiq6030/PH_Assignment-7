@@ -2,29 +2,55 @@ import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-export default function Card() {
+export default function Card({ ticket }) {
+  const { id, title, description, status, priority, customer, createdAt } =
+    ticket;
+
+  const date = new Date(createdAt).toLocaleDateString("en-US");
+
   return (
-    <div className="max-w-[513px] h-[148px] bg-white p-4 text-gray-500 rounded-xl">
-      <div className=" flex justify-between">
-        <h3 className="text-xl font-bold text-black">Login Issue</h3>
-        <div className="flex items-center gap-1 bg-green-200 w-22 h-8 rounded-full p-3">
-          <span className="p-2 w-2 h-2 rounded-full bg-green-800"></span>
-          <span className="text-green-800 font-semibold">open</span>
-        </div>
+    <div className="max-w-[513px] h-[160px] bg-white p-5 text-gray-500 rounded-xl">
+      <div className=" flex justify-between mb-2">
+        <h3 className="text-xl font-semibold text-black">{title}</h3>
+        {status === "Open" && (
+          <div className="flex items-center gap-1 bg-green-200  h-8 rounded-full p-3">
+            <span className="p-2 w-2 h-2 rounded-full bg-green-800"></span>
+            <span className="text-green-800 font-semibold text-nowrap">
+              {status}
+            </span>
+          </div>
+        )}
+        {status === "In-Progress" && (
+          <div className="flex items-center gap-1 bg-yellow-400  h-8 rounded-full p-3">
+            <span className="p-2 w-2 h-2 rounded-full bg-yellow-600"></span>
+            <span className="text-yellow-700 font-semibold text-nowrap">
+              {status}
+            </span>
+          </div>
+        )}
       </div>
-      <p>
-        Customer is unable to log in to their account. They've tried resetting
-        their password multiple times but still...
-      </p>
-      
+      <p>{description}</p>
+
       <div className="flex justify-between mt-4">
         <div className="flex gap-2">
-          <span>#1001</span>
-          <span className="text-red-700">HIGH PRIORITY</span>
+          <span>#{id}</span>
+          <span
+            className={`
+               ${priority === "Low" && "text-green-700"}
+            ${priority === "High" && "text-red-600"} 
+            ${priority === "Critical" && "text-red-900"}
+            ${priority === "Medium" && "text-yellow-700"}
+            uppercase
+            `}
+          >
+            {priority} PRIORITY
+          </span>
         </div>
         <div className="flex gap-2">
-          <span> JOHN SMITH</span>
-          <span><FontAwesomeIcon icon={faCalendar} className="text-2xl " /> 1/15/2024</span>
+          <span>{customer}</span>
+          <span>
+            <FontAwesomeIcon icon={faCalendar} className="text-2xl " /> {date}
+          </span>
         </div>
       </div>
     </div>
