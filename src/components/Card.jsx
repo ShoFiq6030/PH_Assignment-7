@@ -2,14 +2,17 @@ import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-export default function Card({ ticket }) {
+export default function Card({ ticket, onTicketCardClick }) {
   const { id, title, description, status, priority, customer, createdAt } =
     ticket;
 
   const date = new Date(createdAt).toLocaleDateString("en-US");
 
   return (
-    <div className="max-w-[513px] h-[160px] bg-white p-5 text-gray-500 rounded-xl">
+    <div
+      className="max-w-[513px] h-[160px] bg-white p-5 text-gray-500 rounded-xl"
+      onClick={onTicketCardClick}
+    >
       <div className=" flex justify-between mb-2">
         <h3 className="text-xl font-semibold text-black">{title}</h3>
         {status === "Open" && (
