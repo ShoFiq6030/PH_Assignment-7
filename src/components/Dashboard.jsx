@@ -8,7 +8,7 @@ export default function Dashboard() {
           <div className="bg-[url(./src/assets/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80"></div>
           <div className="flex flex-col justify-center items-center gap-4">
             <span className="text-xl text-nowrap">In-Progress</span>
-            <p className="text-4xl font-bold">0</p>
+            <p className="text-5xl font-bold">0</p>
           </div>
           <div className="bg-[url(./src/assets/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80 transform scale-x-[-1]"></div>
         </div>
@@ -18,7 +18,7 @@ export default function Dashboard() {
           <div className="bg-[url(./src/assets/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80"></div>
           <div className="flex flex-col justify-center items-center gap-4">
             <span className="text-xl text-nowrap">Resolved</span>
-            <p className="text-4xl font-bold">0</p>
+            <p className="text-5xl font-bold">0</p>
           </div>
           <div className="bg-[url(./src/assets/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80 transform scale-x-[-1]"></div>
         </div>
