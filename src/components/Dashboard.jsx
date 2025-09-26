@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Dashboard() {
   return (
-    <div className="flex p-10 gap-10">
+    <div className="flex p-10 gap-10 container ">
       <div className="w-1/2 max-h-[250px]  bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white">
         <div className="flex justify-between ">
           <div className="bg-[url(./src/assets/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80"></div>

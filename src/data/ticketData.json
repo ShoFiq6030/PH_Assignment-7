@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1a3f9b2c-8d4e-4f5a-9b12-0f6a4c7d8e01",
+    "title": "Unable to login to account",
+    "description": "Customer reports receiving 'invalid credentials' error after password reset.",
+    "customer": "Ayesha Rahman",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-25T09:14:00+06:00"
+  },
+  {
+    "id": "2b4e8c3d-7f5a-4b9c-a123-1b7d5e9f0a22",
+    "title": "Payment gateway timeout",
+    "description": "Transactions failing intermittently with a timeout from PGW during peak hours.",
+    "customer": "Rahim Khan",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2025-09-24T16:40:00+06:00"
+  },
+  {
+    "id": "3c5d7e4f-6a9b-4c8d-b234-2c8e6f1a3b33",
+    "title": "Mobile app crash on startup",
+    "description": "Android app crashes immediately after splash screen on Android 13 devices.",
+    "customer": "Sadia Noor",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-22T11:05:00+06:00"
+  },
+  {
+    "id": "4d6f8a5b-9c1d-4e7f-c345-3d9f7a2b4c44",
+    "title": "Request for invoice correction",
+    "description": "Customer needs invoice #INV-2025-0920 corrected for billing address.",
+    "customer": "Imtiaz Hossain",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2025-09-20T14:30:00+06:00"
+  },
+  {
+    "id": "5e7a9b6c-0d2e-4f8a-d456-4e0a8b3c5d55",
+    "title": "Feature request: export ticket CSV",
+    "description": "Customer requests ability to export ticket lists to CSV with custom columns.",
+    "customer": "Nadia Karim",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-18T09:00:00+06:00"
+  },
+  {
+    "id": "6f8b0c7d-1e3f-4a9b-e567-5f1b9c4d6e66",
+    "title": "Email notifications not received",
+    "description": "Several users reporting they are not receiving ticket notifications via email.",
+    "customer": "Rafiq Ahmed",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-17T08:20:00+06:00"
+  },
+  {
+    "id": "7g9c1d8e-2f4a-4b0c-f678-6g2c0d5e7f77",
+    "title": "Slow page load on dashboard",
+    "description": "Dashboard takes more than 10s to load with >500 tickets in view.",
+    "customer": "Laila Sultana",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-15T13:45:00+06:00"
+  },
+  {
+    "id": "8h0d2e9f-3g5b-4c1d-0g89-7h3d1e6f8g88",
+    "title": "Attachment upload failing (413)",
+    "description": "Uploads larger than 5MB return 413 Payload Too Large from API.",
+    "customer": "Md. Shofikul",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-12T10:10:00+06:00"
+  },
+  {
+    "id": "9i1e3f0g-4h6c-4d2e-1h90-8i4e2f7g9h99",
+    "title": "User role permissions incorrect",
+    "description": "Users with 'agent' role can access admin-only sections.",
+    "customer": "Farhana Begum",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2025-09-10T15:55:00+06:00"
+  },
+  {
+    "id": "0j2f4g1h-5i7d-4e3f-2i01-9j5f3g8h0i10",
+    "title": "Localization: Bengali missing strings",
+    "description": "Several UI strings remain untranslated in the Bengali locale.",
+    "customer": "Sourav Das",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2025-09-08T12:00:00+06:00"
+  },
+  {
+    "id": "a1k3g5h2-6j8e-4f4g-3j12-0k6g4h9i1j11",
+    "title": "Two-factor authentication setup issue",
+    "description": "Authenticator app QR code returns invalid token when scanning.",
+    "customer": "Tania Chowdhury",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-05T18:25:00+06:00"
+  },
+  {
+    "id": "b2l4h6i3-7k9f-4g5h-4k23-1l7h5i0j2k12",
+    "title": "Data export delayed",
+    "description": "Scheduled nightly export did not complete for 2025-09-04; job stuck.",
+    "customer": "Aman Ullah",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-04T07:50:00+06:00"
+  }
+]
