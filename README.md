@@ -1,16 +1,34 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What is JSX, and why is it used?
+JSX (JavaScript XML) is a syntax extension for JavaScript used in React. It allows us to write HTML-like code directly in our JavaScript files. JSX makes it easier to visualize and create UI components by combining markup and logic in one place. Under the hood, JSX is transformed into React function calls (`React.createElement`).
 
-Currently, two official plugins are available:
+## What is the difference between State and Props?
+- **State** is data managed within a component. It can change over time and affects how the component renders and behaves.
+- **Props** (short for "properties") are data passed from a parent component to a child component. Props are read-only and cannot be modified by the child.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What is the useState hook, and how does it work?
+The `useState` hook is a React function that lets us add state to functional components. It returns an array with two elements: the current state value and a function to update it.
 
-## React Compiler
+**Example:**
+```jsx
+const [count, setCount] = useState(0);
+```
+- `count` is the state variable.
+- `setCount` is the function to update `count`.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How can you share state between components in React?
+State can be shared between components by:
+- **Lifting state up:** Move the state to a common parent component and pass it down as props.
 
-## Expanding the ESLint configuration
+## How is event handling done in React?
+Event handling in React is done by passing event handler functions as props to elements. Handlers use camelCase naming and receive a synthetic event object.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Example:**
+```jsx
+function MyButton() {
+  function handleClick() {
+    alert('Button clicked!');
+  }
+  return <button onClick={handleClick}>Click Me</button>;
+}
+```
