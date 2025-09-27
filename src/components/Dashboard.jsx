@@ -1,14 +1,14 @@
 import React from "react";
 
-export default function Dashboard() {
+export default function Dashboard({ inProgressData, resolvedTaskData }) {
   return (
-    <div className="flex p-10 gap-10 container ">
+    <div className="flex p-10 gap-10 container mx-auto ">
       <div className="w-1/2 max-h-[250px]  bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white">
         <div className="flex justify-between ">
           <div className="bg-[url(./src/assets/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80"></div>
           <div className="flex flex-col justify-center items-center gap-4">
             <span className="text-xl text-nowrap">In-Progress</span>
-            <p className="text-5xl font-bold">0</p>
+            <p className="text-5xl font-bold">{inProgressData.length}</p>
           </div>
           <div className="bg-[url(./src/assets/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80 transform scale-x-[-1]"></div>
         </div>
@@ -18,7 +18,7 @@ export default function Dashboard() {
           <div className="bg-[url(./src/assets/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80"></div>
           <div className="flex flex-col justify-center items-center gap-4">
             <span className="text-xl text-nowrap">Resolved</span>
-            <p className="text-5xl font-bold">0</p>
+            <p className="text-5xl font-bold">{resolvedTaskData.length}</p>
           </div>
           <div className="bg-[url(./src/assets/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80 transform scale-x-[-1]"></div>
         </div>

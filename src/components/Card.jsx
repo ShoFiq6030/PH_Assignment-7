@@ -11,7 +11,7 @@ export default function Card({ ticket, onTicketCardClick }) {
   return (
     <div
       className="max-w-[513px] h-[160px] bg-white p-5 text-gray-500 rounded-xl"
-      onClick={onTicketCardClick}
+      onClick={() => onTicketCardClick(ticket)}
     >
       <div className=" flex justify-between mb-2">
         <h3 className="text-xl font-semibold text-black">{title}</h3>

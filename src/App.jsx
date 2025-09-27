@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Dashboard from "./components/Dashboard";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
@@ -9,33 +9,64 @@ import fetchData from "./utils/fetchData";
 import { ToastContainer, toast } from "react-toastify";
 
 function App() {
-  const data = fetchData();
+  // const data = fetchData();
+  const [ticketData, setTicketData] = useState([]);
+  const [inProgressData, setInProgressData] = useState([]);
+  const [resolvedTaskData, setResolvedTaskData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const onTicketCardClick = () => {
+  useEffect(() => {
+    setLoading(true);
+    fetchData().then((data) => setTicketData(data));
+    setLoading(false);
+  }, []);
+
+  const onTicketCardClick = (ticket) => {
     const notify = () => toast("In Progress");
     notify();
+    setInProgressData((prev) => [...prev, ticket]);
+  };
+
+  const onTaskCompleteClick = (task) => {
+    const notify = () => toast("Task Completed");
+    notify();
+    setInProgressData((prev) => prev.filter((t) => t.id !== task.id));
+    setResolvedTaskData((prev) => [...prev, task]);
+    setTicketData((prev) => prev.filter((t) => t.id !== task.id));
   };
 
   return (
-    <div className=" mx-auto ">
+    <div className=" ">
       <ToastContainer />
 
       <Nav />
       <div className="bg-[#F5F5F5] ">
-        <Dashboard />
+        <Dashboard
+          inProgressData={inProgressData}
+          resolvedTaskData={resolvedTaskData}
+        />
         <div className="container mx-auto flex gap-10">
           <div className="w-2/3">
-            <Suspense fallback={<h2>Loading...</h2>}>
+            {/* <Suspense fallback={<h2 className="h-[60vh]">Loading...</h2>}> */}
+
+            {loading ? (
+              <h2 className="h-[60vh] text-center">Loading...</h2>
+            ) : (
               <TicketSection
-                data={data}
+                data={ticketData}
                 onTicketCardClick={onTicketCardClick}
               />
-            </Suspense>
+            )}
+
+            {/* </Suspense> */}
           </div>
 
           <div className="w-1/3">
-            <TaskStatus />
-            <ResolvedTask />
+            <TaskStatus
+              inProgressData={inProgressData}
+              onTaskCompleteClick={onTaskCompleteClick}
+            />
+            <ResolvedTask resolvedTaskData={resolvedTaskData} />
           </div>
         </div>
       </div>
