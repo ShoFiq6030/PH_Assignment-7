@@ -10,7 +10,7 @@ export default function Dashboard({ inProgressData, resolvedTaskData }) {
             <span className="text-xl text-nowrap">In-Progress</span>
             <p className="text-5xl font-bold">{inProgressData.length}</p>
           </div>
-          <div className="bg-[url(./src/assets/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80 transform scale-x-[-1]"></div>
+          <div className="bg-[url(https://i.ibb.co.com/qM4YkCrt/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80 transform scale-x-[-1]"></div>
         </div>
       </div>
       <div className="w-1/2 max-h-[250px]  bg-linear-to-r from-[#54CF68] to-[#00827A] text-white">
@@ -20,7 +20,7 @@ export default function Dashboard({ inProgressData, resolvedTaskData }) {
             <span className="text-xl text-nowrap">Resolved</span>
             <p className="text-5xl font-bold">{resolvedTaskData.length}</p>
           </div>
-          <div className="bg-[url(./src/assets/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80 transform scale-x-[-1]"></div>
+          <div className="bg-[url(https://i.ibb.co.com/qM4YkCrt/vector1.png)] max-h-[250px] bg-no-repeat w-80 h-80 transform scale-x-[-1]"></div>
         </div>
       </div>
     </div>
