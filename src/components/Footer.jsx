@@ -12,8 +12,7 @@ export default function Footer() {
       <footer className="bg-black text-white min-h-[432px] max-w-[1600px] mx-auto  ">
         <div className="grid grid-cols-1 lg:grid-cols-5 text-center lg:text-left gap-4 p-10 text-gray-400">
           <div className="md:mr-10">
-            <h1 className="text-2xl font-bold text-center pt-10 pb-4 text-white">
-              CS — Ticket System
+            <h1 className="text-2xl font-bold  pt-10 pb-4 text-white lg:text-left">CS — Ticket System
             </h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting

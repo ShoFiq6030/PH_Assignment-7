@@ -45,8 +45,8 @@ function App() {
           inProgressData={inProgressData}
           resolvedTaskData={resolvedTaskData}
         />
-        <div className="container mx-auto flex gap-10">
-          <div className="w-2/3">
+        <div className="container mx-auto flex flex-col-reverse lg:flex-row gap-10">
+          <div className="lg:w-2/3">
             {/* <Suspense fallback={<h2 className="h-[60vh]">Loading...</h2>}> */}
 
             {loading ? (
@@ -61,7 +61,7 @@ function App() {
             {/* </Suspense> */}
           </div>
 
-          <div className="w-1/3">
+          <div className="lg:w-1/3">
             <TaskStatus
               inProgressData={inProgressData}
               onTaskCompleteClick={onTaskCompleteClick}
